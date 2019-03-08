@@ -1,0 +1,1159 @@
+/** 普通搜索*/
+
+.clearfix:after, .clearfix:before {
+    // content: ".";
+    /*加一段内容*/
+    display: table;
+    /*创建匿名的表格单元，触发bfc*/
+}
+
+.clearfix:after {
+    clear: both;
+    /*清除浮动*/
+}
+
+.aiib-general-search {
+    width: 260px !important;
+    .ant-input-affix-wrapper {
+        border-right: none;
+        max-width: calc(~'100% - 75px');
+        .ant-input {
+            border-right: none;
+        }
+    }
+    .ant-btn {
+        width: 75px;
+    }
+}
+
+
+/** 高级搜索*/
+
+.aiib-adv-search-modal {
+    .ant-modal .ant-modal-content {
+        .ant-modal-header {
+            background-color: #f3f4f8;
+            .ant-modal-title .ak-modal-dragtitle {
+                color: #555;
+            }
+        }
+        .ant-modal-close {
+            /** PC端*/
+            @media (min-width: 768px) {
+                width: 30px;
+                height: 30px;
+                opacity: 1;
+                margin-top: 0;
+                outline: medium none;
+                position: absolute;
+                top: -9px;
+                right: -9px;
+                left: auto;
+                color: #196d8c;
+                border-radius: 15px;
+                background: #fff;
+                line-height: 30px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, .1);
+            }
+            @media (max-width: 768px) {
+                background: none;
+                .ant-modal-close-x {
+                    margin-left: 16px;
+                }
+            }
+            .ant-modal-close-x {
+                font-size: 16px;
+                color: #01b7b4;
+                overflow: hidden;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                font-weight: 600;
+            }
+        }
+        .ant-modal-footer {
+            direction: ltr;
+            text-align: right;
+            .btn-footer {
+                border: 1px solid transparent;
+                border-radius: 4px;
+                border: 1px solid transparent;
+            }
+            .btn-search {
+                background: #00acac none repeat scroll 0 0;
+            }
+            .btn-footer-text {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            .btn-search-text {
+                color: #00acac;
+            }
+            .btn-cancel {
+                background: #e0e0e0 none repeat scroll 0 0;
+                color: #555;
+                margin-left: 16px;
+            }
+        }
+    }
+    &-label {
+        font-size: 14px;
+        color: #767676;
+        font-weight: normal;
+        padding-top: 7px;
+    }
+}
+
+.aiib-proposal-adv-modal-label {
+    line-height: 28px;
+}
+
+
+/** 流程审批记录-Workflow-History*/
+
+.aiib-workflow-history-tab-info {
+    .aiib-workflow-history {
+        .ak-form-workflow-history {
+            .ant-table {
+                .ant-table-title {
+                    background: none;
+                    margin-bottom: 8px;
+                }
+                .ant-table-tbody tbody>tr td {
+                    border-top: 1px solid #eee;
+                    border-bottom: none;
+                    padding: 15px 8px;
+                    color: #6d6d6d;
+                    vertical-align: middle;
+                    word-break: break-word;
+                    max-width: 200px;
+                }
+            }
+            &-btn {
+                color: #000 !important;
+                font-size: 16px !important;
+            }
+        }
+    }
+    .aiib-workflow-history-proposal-stage {
+        h2 {
+            font-weight: 700;
+            font-size: 14px;
+        }
+        &-item {
+            border-top: 1px solid #eee;
+            padding: 10px 8px;
+            color: #6d6d6d;
+        }
+        &-item:nth-child(odd) {
+            background-color: #F9F9F9;
+        }
+    }
+}
+
+.ak_align_r .anticon.ak-ellipsis {
+    padding: 5px;
+    cursor: pointer;
+    &:hover {
+        background: #edecec;
+        border-radius: 50%;
+    }
+}
+
+.printFont(@fontsize) {
+    font-size: @fontsize;
+    font-family: 'Century Gothic';
+    font-weight: bold;
+}
+
+.aiib-report.ant-layout {
+    flex: 1 1 auto;
+}
+
+.ant-table-tbody > tr td {
+    word-break: break-word !important;
+}
+
+.aiib {
+    &-report {
+        &-modal {
+            height: 500px;
+            overflow-y: scroll;
+        }
+        .ant-table-thead >tr th {
+            min-width: 250px;
+            word-break: normal;
+        }
+        .ant-table-tbody > tr td {
+            min-width: 250px;
+            word-break: normal;
+        }
+    }
+    &-metadata {
+        .ant-upload button {
+            background-color: #196c8b;
+            color: #fff;
+            border-radius: 4px;
+            height: 35px;
+            line-height: 35px;
+        }
+        .ant-upload .ant-btn:hover, .ant-btn:focus {
+            background-color: #196c8b;
+            color: #fff;
+        }
+        .ak-header-button.ant-btn-icon-only {
+            width: 50px;
+        }
+        .ak-header-button, .ak-container .ak-header-button:focus, .ant-btn:focus {
+            background-color: transparent;
+            color: #000000;
+        }
+        .ak-header-button:hover {
+            background-color: #d9d9d9;
+            color: #000000;
+        }
+        .ak-header-button {
+            height: 50px;
+            min-width: 50px;
+            border: 0;
+        }
+        .ak-header-title {
+            font-size: 16px;
+            margin-left: 10px;
+            display: inline-block;
+        }
+        .ak-header>* {
+            display: inline-block;
+        }
+        .ant-tree>li:first-child {
+            padding: 0;
+        }
+        .ant-tree li {
+            padding: 0;
+        }
+        .ant-layout-content .ant-menu-item {
+            border-bottom: 1px solid #ECECEC;
+        }
+        .ant-menu-inline, .ant-menu-vertical {
+            border-right: none;
+        }
+    }
+    &-group {
+        .ant-spin-blur {
+            overflow: initial;
+        }
+        .ak-header-title {
+            border-bottom: 1px solid #D9D9D9;
+        }
+        .ant-layout-content .ant-menu-item {
+            border-bottom: 1px solid #ECECEC;
+        }
+        .ant-menu-inline, .ant-menu-vertical {
+            border-right: none;
+        }
+        .anticon {
+            vertical-align: middle;
+        }
+    }
+    &-style {
+        &-lg {
+            display: inline-block;
+        }
+        &-textAlign {
+            text-align: right;
+        }
+        @media screen and (max-width: 1200px) {
+            &-textAlign {
+                text-align: left;
+            }
+        }
+    }
+    &-document {
+        .ak-pdf-viewer-toolbar-center>span {
+            width: 30px;
+            line-height: auto;
+            display: inline-block;
+        }
+        &-pagination {
+            padding: 15px;
+            padding-top: 0;
+            margin: 0 15px !important;
+            background: #FFFFFF;
+            span {
+                font-size: 14px;
+                margin: 0 5px;
+            }
+        }
+        &-header {
+            .ant-input-search .ant-input {
+                background: transparent;
+                height: 30px;
+                font-size: 12px;
+                border-radius: 5px;
+            }
+            .ant-btn-primary {
+                padding: 4px 10px;
+                font-size: 14px;
+                background: #00acac none repeat scroll 0 0 !important;
+                border-radius: 4px;
+            }
+        }
+        .ant-table-thead th {
+            color: #6d6d6d;
+        }
+        .ant-table-row {
+            background: #FFFFFF;
+            padding: 15px 8px;
+        }
+        .ant-table-row td a {
+            color: #000;
+            text-decoration: underline;
+            line-height: 28px;
+        }
+        table tr:nth-child(odd) {
+            background: #F9F9F9;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                a {
+                    padding: 0 5px;
+                }
+            }
+        }
+        &-page {
+            &-title {
+                font-size: 20px;
+                line-height: 32px;
+                padding: 10px;
+            }
+            &-breadcrumb {
+                font-size: 14px;
+            }
+            .ak-header-title {
+                margin-left: 10px;
+            }
+            .ak-header > * {
+                display: inline-block;
+            }
+            .ak-header-button {
+                height: 50px;
+                min-width: 50px;
+                border: 0;
+            }
+            .ak-header-button, .ak-container .ak-header-button:focus {
+                background-color: transparent;
+                color: #000000;
+            }
+            .ak-header-button.active, .ak-header-button:hover, .ak-header-button:active {
+                background-color: #d9d9d9;
+                color: #000000;
+            }
+        }
+        &-list {
+            &-menu {
+                .ant-dropdown-menu-item {
+                    .anticon {
+                        vertical-align: middle;
+                        // padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+    &-contact {
+        margin-top: 10px;
+        &-header {
+            border-bottom: solid 1px #ddd;
+            padding: 2px 0px 7px;
+            min-height: 30px;
+            cursor: pointer;
+            position: relative;
+        }
+        &-word {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &-left {
+            width: 5px;
+            height: 24px;
+            background: #01b7b4;
+            float: left;
+            margin-right: 5px;
+        }
+        &-right {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+        &-form {
+            margin-top: 15px;
+            .aiib-proposal-adv-modal-label {
+                padding: 0 5px;
+            }
+            .ant-input-number {
+                width: 100%;
+            }
+        }
+        &-listed {
+            .ak-col {
+                display: inline-block;
+                margin-right: 15px;
+            }
+        }
+    }
+    &-print {
+        // position: relative;
+        // padding: 20px;
+        // width: 700px;
+        // margin: 0 auto;
+        // height: 100%;
+        // margin-bottom: 70px;
+        &-listtable {
+            max-height: 150px;
+            overflow: auto;
+        }
+        &-date {
+            text-align: right;
+            .printFont(12pt);
+            margin: 20px 0;
+        }
+        &-key {
+            width: 230px;
+            .printFont(10pt);
+        }
+        &-value {
+            &-title {
+                margin: 5px 0;
+                .printFont(10pt);
+            }
+            &-icon {
+                margin: 5px 0;
+            }
+        }
+        &-button {
+            position: absolute;
+            top: -1px;
+            right: 0;
+        }
+        &-body {
+            width: 700px;
+            margin: 10px auto;
+            font-family: 'Century Gothic';
+            &>p {
+                text-align: center;
+                // text-transform: uppercase;
+                .printFont(14pt)
+            }
+            table {
+                width: 100%;
+                margin: 0;
+                border-collapse: collapse;
+                tbody td {
+                    width: 50%;
+                    border: 1px solid #000;
+                    padding: 5px;
+                    vertical-align: text-top;
+                }
+                tbody tr td:nth-child(2) {
+                    text-align: justify;
+                }
+                thead td {
+                    border: none;
+                }
+            }
+        }
+        &-subtitle {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        &-description {
+            font-size: 10pt;
+            font-style: italic;
+            font-weight: normal;
+            &-title {
+                font-style: normal;
+                margin-bottom: 15px
+            }
+            &-footer {
+                margin-top: 15px
+            }
+        }
+        &-modal {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+            z-index: 999;
+        }
+        &-header {
+            height: 50px;
+            background-color: #196D8C;
+            text-align: right;
+            button.ant-btn {
+                background-color: #196D8C;
+                height: 50px;
+                line-height: 50px;
+                border: none;
+                font-size: 14px;
+                color: #fff;
+                &:hover {
+                    background-color: #01B7B4;
+                }
+            }
+        }
+        &-text {
+            width: 100%;
+            word-break: break-all;
+            white-space: pre-wrap;
+        }
+    }
+    &-milestones {
+        padding-left: 20px;
+        padding-top: 10px;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            height: 12px !important;
+        }
+        &-li {
+            width: 125px;
+            float: left;
+            position: relative;
+            height: 200px;
+        }
+        li::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #bbbbbb;
+            top: 50%;
+            margin-top: -15px;
+        }
+        li::before {
+            content: '';
+            width: 125px;
+            border-bottom: 3px solid #C2DAC2;
+            position: absolute;
+            top: 50%;
+            margin-top: -1px;
+        }
+        li.large::after {
+            width: 36px;
+            height: 36px;
+            margin-top: -18px;
+        }
+        li.runing::after {
+            background-color: #FFFF00;
+        }
+        li.pass::after {
+            background-color: #01b7b4;
+        }
+        li.stateless::after {
+            background-color: #bbbbbb;
+        }
+        li.cancel::after {
+            background-color: #dc143c;
+        }
+        li.last::before {
+            border-bottom: none;
+        }
+        &-word {
+            position: absolute;
+            left: -20px;
+        }
+        &-word.up {
+            top: 40px;
+        }
+        &-word.down {
+            bottom: 50px;
+        }
+        &-mainname {
+            font-weight: bold;
+            font-size: 16px;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                top: 32px;
+                left: 18px;
+                height: 50px;
+                background: #A3C7E7;
+                // border-left: 2px solid #A3C7E7;
+            }
+        }
+    }
+}
+
+.ak-layout-frame .ak-main-content-body .ant-spin-nested-loading {
+    min-height: auto;
+}
+
+.ak-layout-frame .aiib-workflow-sider .ant-layout-sider-zero-width-trigger {
+    background-color: #e2e6ea;
+}
+
+.ak-import-text {
+    margin: 10px;
+    .ak-import-name {
+        display: inline-block;
+        margin-left: 8px;
+    }
+}
+
+.ak-container {
+    .aiib-project-description textarea.ant-input {
+        height: 90px;
+    }
+    .ak-col {
+        word-break: normal !important;
+    }
+    .aiib-project-submit {
+        .ak-col {
+            word-break: normal !important;
+        }
+        .ant-form-item-label label {
+            word-break: normal;
+        }
+    }
+    .aiib-button {
+        border: none;
+        border-left: solid 1px #f0f0f0;
+        background: #fff;
+        color: #3f859e;
+        height: 33px;
+        padding: 0 15px;
+        line-height: 33px;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 3px;
+        font-size: 14px;
+    }
+    .ak-tab-actions {
+        .aiib-button {
+            margin-left: 8px;
+        }
+        .aiib-delegate-tip {
+            float: left;
+            height: 33px;
+            line-height: 33px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+    }
+    .aiib-button.dark {
+        background: #196c8b !important;
+        color: #fff !important;
+    }
+    .aiib-button.skyblue {
+        background:skyblue !important;
+        color:#fff !important;
+    }
+    .aiib-button.warn {
+        background: #f0ad4e !important;
+        color: #fff !important;
+    }
+    .aiib-icon.dark-icon {
+        color: #196c8b;
+    }
+    .aiib-icon.grey-icon {
+        color: #e0e0e0;
+    }
+    .aiib-button.grey {
+        background: #e0e0e0;
+    }
+    .aiib-icon.green-icon {
+        color: #00acac;
+    }
+    .aiib-button.green {
+        background: #00acac !important;
+        color: #fff;
+    }
+    .aiib-icon.red-icon {
+        color: #d9534f;
+    }
+    .aiib-button.red {
+        background: #d9534f !important;
+        color: #fff !important;
+    }
+    .aiib-button.blue {
+        background: #5bc0de !important;
+        color: #fff;
+    }
+    .aiib-button.disabled {
+        background-color: #fafafa;
+        border-color: #d9d9d9;
+        color: #666666;
+    }
+    .aiib-content {
+        .ant-table-content {
+            &::-webkit-scrollbar {
+                height: 12px !important;
+            }
+            .ant-table-body {
+                &::-webkit-scrollbar {
+                    height: 12px !important;
+                }
+            }
+        }
+        .ak-datamain-header {
+            padding: 0;
+            line-height: 50px;
+            .ak-header-sectortitle {
+                width: 66%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+        .aiib-list-tab .ant-tabs-bar {
+            margin-bottom: 0;
+            padding: 0 15px;
+            border: none;
+            .ant-tabs-nav-container {
+                height: auto;
+            }
+            .ant-tabs-tab {
+                height: 44px;
+                background: #fff;
+                cursor: pointer;
+                color: #fff;
+                background: #196d8c;
+                text-align: center;
+                font-size: 14px;
+                line-height: 44px;
+                padding: 0 25px;
+                border: none;
+                &.ant-tabs-tab-active {
+                    background: #01b7b4;
+                }
+            }
+        }
+        // td.ak-responsive-table-column {
+        //     overflow: hidden;
+        //     text-overflow: ellipsis;
+        //     white-space: nowrap;
+        // }
+        .ak-responsive-table-column {
+            word-break: keep-all !important;
+            word-wrap: break-word;
+            text-align: center;
+        }
+        td.aiib-project-list-row {
+            white-space: normal;
+        }
+        &-form {
+            padding: 15px;
+            background: #FFFFFF;
+            .ak-col {
+                word-break: normal !important;
+            }
+            .ant-input-number {
+                border: none;
+                display: block !important;
+                &:hover .ant-input-number-input {
+                    border-color: #88bdf0;
+                }
+                &:hover .ant-input-number-handler-wrap {
+                    border: 1px solid #88bdf0;
+                    border-left-color: #d9d9d9;
+                }
+            }
+            .ant-input-number-handler-wrap {
+                height: 26px;
+            }
+            .ant-input-number-focused {
+                border: none;
+                box-shadow: none !important;
+                .ant-input-number-handler-wrap {
+                    height: 26px;
+                    border: 1px solid #88bdf0;
+                    border-left-color: #d9d9d9;
+                }
+            }
+            .ant-input-number-input {
+                border: 1px solid #d9d9d9;
+            }
+            .ant-radio-inner {
+                &::after {
+                    display: inline-block;
+                }
+            }
+        }
+        .ant-table-content {
+            .ant-table-tbody tr:nth-of-type(odd) {
+                background-color: #f9f9f9;
+            }
+        }
+        background:#F2F4F8;
+        .ant-table-wrapper {
+            padding: 15px;
+            background: #FFFFFF;
+            margin: 0 15px;
+        }
+        .ant-table-body {
+            color: #6d6d6d;
+            a {
+                color: #000000;
+                text-decoration: underline;
+            }
+        }
+        .aiib-title {
+            font-size: 16px;
+            &-text {
+                display: inline-block;
+                padding: 0 5px;
+            }
+        }
+        .ak-tab-actions {
+            padding: 15px;
+            .ak-header-btn {
+                margin-left: 8px;
+                border-radius: 4px;
+            }
+            .aiib-actions-button {
+                border-right: 1px solid #fff;
+                height: 44px;
+                background: #fff;
+                cursor: pointer;
+                color: #fff;
+                background: #196d8c;
+                padding: 10px 25px;
+                text-align: center;
+                font-size: 14px;
+                line-height: 22px;
+                border-color: inherit;
+            }
+            .aiib-actions-button.active {
+                background: #01b7b4;
+                color: #FFF;
+                // font-weight: 700;
+            }
+        }
+        .proposal-note {
+            line-height: 20px;
+            p {
+                margin-bottom: 10px;
+            }
+        }
+        .color-green, .color-status-4 {
+            color: #5cb85c;
+        }
+        .color-status-1, .color-status-2 {
+            color: #5bc0de;
+        }
+        .color-status-3, .color-cancel-status-2 {
+            color: #d9534f;
+        }
+        .color-cancel-status-1 {
+            color: #f7b80e;
+        }
+        .color-blue {
+            color: #c6de5b;
+        }
+        .aiib-members {
+            &-content {
+                position: relative;
+                .aiib-members-email {
+                    position: absolute;
+                    right: 15px;
+                }
+            }
+        }
+        .aiib-list-header {
+            padding: 0 15px;
+            overflow: hidden;
+            zoom: 1;
+            &-left {
+                margin: 8px 0;
+                display: inline-block;
+                overflow: hidden;
+            }
+            &-right {
+                margin: 8px 0;
+                display: inline-block;
+                float: right;
+            }
+        }
+        .application-detail-box {
+            width: 100%;
+            border: 1px solid #ddd;
+            padding: 8px 10px;
+            margin: -1px 1px 15px 1px;
+            .application-detailed-ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    float: left;
+                    width: calc(~'(100% - 60px) / 2');
+                    margin-right: 8px;
+                    min-height: 50px;
+                }
+                .delete-icon {
+                    width: 28px;
+                }
+            }
+            .application-detail-btn {
+                text-align: center;
+                color: #00acac;
+                .ant-btn-dashed {
+                    border-color: #00acac;
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            .ant-table-wrapper {
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+    }
+    .aiib-app {
+        background-color: #FFF;
+        min-height: calc(~'100vh - 80px');
+        position: relative;
+        &-content {
+            padding: 0% 20%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            .ak-app-container {
+                &-img {
+                    position: relative;
+                    box-sizing: border-box;
+                    img {
+                        width: 100%;
+                    }
+                }
+                &-title {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 18px;
+                    padding: 20px;
+                }
+            }
+            @media (max-width: 768px) {
+                padding: 4% 15% 1%;
+            }
+        }
+    }
+    .ak-header-title {
+        &-sub1 {
+            color: #a2a2a2;
+            font-size: 16px;
+        }
+        &-line {
+            font-size: 16px;
+            color: #a2a2a2;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        &-text {
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 5px;
+            color: #a2a2a2;
+        }
+        &-sub2 {
+            color: #777;
+            font-size: 16px;
+        }
+    }
+    .aiib-workflow-sider {
+        .ant-layout-sider-children {
+            background: #16313b;
+        }
+        .aiib-workflow-layout {
+            background: #16313b;
+            .aiib-workflow-nav, .aiib-menu {
+                background: #16313b;
+                .ant-menu-item {
+                    color: #377f9a;
+                    white-space: normal;
+                    height: auto;
+                    padding: 0;
+                    position: relative;
+                    border: 0;
+                    &:hover {
+                        background: #16313b;
+                    }
+                    &>a {
+                        color: #377f9a;
+                    }
+                    .aiib-menu-text {
+                        font-size: 14px;
+                        padding-left: 20px;
+                        .iconfont {
+                            margin-right: 10px;
+                        }
+                    }
+                    .menu_title {
+                        word-break: normal;
+                        word-wrap: break-word;
+                        line-height: 20px;
+                    }
+                    .menu_icon {
+                        color: #01b7b4;
+                        vertical-align: top;
+                    }
+                }
+                .ant-menu-item-active {
+                    color: #fff;
+                    background-color: #293846;
+                    .menu_icon {
+                        color: #fff;
+                    }
+                }
+                .ant-menu-item-active>a {
+                    color: #fff;
+                    background-color: #293846;
+                }
+                .ant-menu-item-selected, .ant-menu-item-selected>a, .ant-menu-item-selected>a:hover, {
+                    color: #fff;
+                    background-color: #293846;
+                    .menu_right {
+                        position: absolute;
+                        right: 0;
+                        top: 40%;
+                        width: 0;
+                        height: 0;
+                        border-top: 8px solid transparent;
+                        border-bottom: 8px solid transparent;
+                        border-right: 8px solid #e2e6ea;
+                    }
+                    .menu_icon {
+                        color: #fff;
+                    }
+                }
+                .ant-menu-item-selected:after {
+                    display: none;
+                }
+            }
+            .aiib-nav {
+                .menu_title {
+                    display: inline-block;
+                    width: 179px;
+                }
+            }
+        }
+    }
+    .ak-right-content {
+        .aiib-content {
+            .ant-table-wrapper {
+                margin-left: 0px;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .ak-tab-actions {
+            .aiib-button {
+                margin-left: 4px;
+                padding: 0 5px;
+            }
+        }
+    }
+}
+
+.ak-main-content-body.ant-layout-content {
+    background: #F2F4F8;
+}
+
+.ak-master-content {
+    background: #F2F4F8;
+}
+
+.ak-header.ant-layout-header {
+    background: #e2e6ea;
+    height: 50px;
+    // line-height: 50px;
+}
+
+.ak-container .ak-form .ant-form-item-label {
+    padding-bottom: 10px;
+}
+
+@media print {
+    @media page {
+        size: auto;
+        /* auto is the initial value */
+        margin: 2mm 4mm 0mm 0mm;
+        /* this affects the margin in the printer settings */
+    }
+    .ak-header {
+        display: none;
+    }
+    .aiib-print {
+        //width: 100%;
+        //visibility: visible;
+        //top: 0;
+        padding: 0 10px;
+        &-button {
+            display: none;
+        }
+        &-body {
+            margin: auto;
+        }
+        &-header {
+            display: none;
+        }
+    }
+    .aiib-content-form {
+        display: none;
+    }
+    table {
+        // page-break-after:auto;
+        thead {
+            tr {
+                display: none;
+            }
+            display: table-header-group;
+        }
+        tfoot {
+            display: table-footer-group;
+        }
+    }
+    .ak-react-masterpage-header.ant-layout-header {
+        display: none;
+    }
+    .ant-message {
+        display: none;
+    }
+}
+
+// project create a submission 文档不换行
+.aiib-project-submission {
+    .ant-table-thead > tr > th, .ant-table-tbody > tr > td {
+        word-break: normal;
+    }
+}
+
+.ant-modal-content .ant-table-content{
+    &::-webkit-scrollbar {
+        height: 12px !important;
+    }
+}
+.aiib-add-newmember .ak-col .ant-form-item-required:after {
+    display: inline-block;
+    margin-left: 4px;
+    content: "*";
+    font-family: SimSun;
+    line-height: 1;
+    font-size: 12px;
+    color: #f04134;
+}
+.aiib-add-newmember .ak-col .ant-form-item-required:before {
+    content: ""
+}
+.aiib-workflow-sider {
+
+}
